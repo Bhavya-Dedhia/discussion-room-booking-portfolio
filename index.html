@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discussion Room Booking System | Bhavya Dedhia</title>
+<style>
+:root{--blue:#2457d6;--ink:#172033;--muted:#667085;--bg:#f7f8fc;--line:#e6eaf2}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.wrap{width:min(1080px,calc(100% - 36px));margin:auto}.nav{display:flex;justify-content:space-between;padding:22px 0;align-items:center}.brand{font-weight:800;font-size:20px}.brand span,h1 span{color:var(--blue)}nav{display:flex;gap:20px;font-size:14px}a{color:inherit;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:65px 0}.badge{color:var(--blue);background:#e9efff;padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800}
+h1{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-.04em;margin:20px 0}.lead{font-size:18px;color:var(--muted)}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;margin:8px 8px 0 0;font-weight:700}.primary{background:var(--blue);color:white}.secondary{background:white;border:1px solid var(--line)}
+.preview{background:linear-gradient(145deg,#1c3c90,#3973ef);padding:24px;border-radius:24px;color:white;box-shadow:0 18px 45px #1d3b901c}.rooms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.room{background:#ffffff20;border:1px solid #ffffff30;border-radius:12px;padding:15px}.room small{opacity:.75}.room strong{display:block;margin:4px 0 10px}.status{background:#d9ffed;color:#08784e;padding:4px 8px;border-radius:6px;font-size:11px;font-weight:800}
+section{padding:50px 0}.eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:12px}h2{font-size:clamp(28px,3vw,38px);line-height:1.15;margin:10px 0 15px}.muted,p{color:var(--muted)}
+.grid2,.features,.gallery,.steps{display:grid;gap:16px}.grid2{grid-template-columns:1fr 1fr}.features{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}.steps{grid-template-columns:repeat(4,1fr)}
+.card,.feature,.step{background:white;border:1px solid var(--line);border-radius:16px;padding:22px}.feature h3{margin:8px 0}.feature p,.step p{font-size:14px;margin:0}.tag{display:inline-block;background:#eef3ff;color:#2448a7;padding:8px 12px;border-radius:8px;margin:4px;font-size:13px;font-weight:700}
+.placeholder{min-height:175px;border:1px dashed #aab9d8;background:#f0f4fc;border-radius:14px;display:grid;place-items:center;text-align:center;padding:18px;color:#536582}.placeholder strong{display:block;color:#263c66}
+.dark{background:#13254c;color:white;padding:32px;border-radius:22px}.dark p{color:#c7d2ea}.footer{padding:30px 0;border-top:1px solid var(--line);font-size:13px}
+@media(max-width:760px){nav{display:none}.hero,.grid2{grid-template-columns:1fr}.features,.gallery{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.features,.gallery,.steps{grid-template-columns:1fr}.hero{padding:38px 0}.rooms{gap:8px}}
+/* Recognition & Project Completion Section */
+.recognition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.document-card {
+    background: white;
+    border: 1px solid #e6eaf2;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 8px 24px #1720330a;
+}
+
+.document-card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.document-card h3 {
+    margin: 14px 0 4px;
+    font-size: 18px;
+}
+
+.document-card p {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.document-link {
+    display: inline-block;
+    color: #2457d6;
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.verified {
+    display: inline-block;
+    color: #08784e;
+    background: #e5f8ef;
+    padding: 5px 9px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .recognition-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .document-card img {
+        height: 220px;
+    }
+}
+</style>
+</head>
+<body>
+<header class="wrap nav"><div class="brand">DRB<span>System</span></div><nav><a href="#overview">Overview</a><a href="#features">Features</a><a href="#tech">Technology</a><a href="#screens">Screenshots</a></nav><a class="btn secondary" href="#contact">Contact</a></header>
+<main>
+<div class="wrap hero">
+<div><span class="badge">MICROSOFT POWER PLATFORM · CASE STUDY</span><h1>Discussion Room<br><span>Booking System</span></h1><p class="lead">A digital room reservation and availability solution developed for MPSTME Library, NMIMS.</p><a class="btn primary" href="#screens">Explore project ↓</a><a class="btn secondary" href="#overview">Read case study</a><p><small>Designed & Developed by <b>Bhavya Dedhia</b></small></p></div>
+<div class="preview"><b>Discussion Room Booking</b><p style="color:#e4eaff">Illustrative dashboard preview</p><h2>Room availability</h2><div class="rooms">
+<div class="room"><small>ROOM 01</small><strong>Aryabhatta</strong><span class="status">Available</span></div><div class="room"><small>ROOM 02</small><strong>CV Raman</strong><span class="status">Available</span></div>
+<div class="room"><small>ROOM 03</small><strong>Kalpana Chawla</strong><span class="status">Available</span></div><div class="room"><small>ROOM 04</small><strong>Vikram Sarabhai</strong><span class="status">Available</span></div></div></div>
+</div>
+<section id="overview"><div class="wrap"><div class="eyebrow">01 · Overview</div><h2>Turning a real operational need into a digital solution</h2><p>This project focused on providing a structured way to reserve discussion rooms and help library staff oversee booking activity.</p><div class="grid2"><article class="card"><h3>The challenge</h3><p>Checking availability across rooms and time slots, preventing overlapping reservations, and keeping booking information organized.</p></article><article class="card"><h3>The solution</h3><p>A Microsoft Power Apps Canvas App integrated with SharePoint / Microsoft Lists to centralize booking and administrative workflows.</p></article></div></div></section>
+<section id="features"><div class="wrap"><div class="eyebrow">02 · Features</div><h2>Core functionality</h2><div class="features">
+<div class="feature"><b>01</b><h3>Room booking</h3><p>Submit reservations with room, date, time slot, and relevant details.</p></div><div class="feature"><b>02</b><h3>Availability matrix</h3><p>View room availability across time slots.</p></div><div class="feature"><b>03</b><h3>My bookings</h3><p>Review reservations and booking status.</p></div><div class="feature"><b>04</b><h3>Booking validation</h3><p>Required-field checks and booking restrictions.</p></div><div class="feature"><b>05</b><h3>Admin dashboard</h3><p>Booking visibility and administrative controls.</p></div><div class="feature"><b>06</b><h3>Blocked slots</h3><p>Block rooms, dates, or time slots when unavailable.</p></div>
+</div></div></section>
+<section><div class="wrap"><div class="eyebrow">03 · Development process</div><h2>From requirements to implementation</h2><div class="steps"><div class="step"><b>01 · Understand</b><p>Identify booking and administration needs.</p></div><div class="step"><b>02 · Design</b><p>Plan screens, fields, and user journeys.</p></div><div class="step"><b>03 · Build</b><p>Develop app, data structure, and Power Fx logic.</p></div><div class="step"><b>04 · Test</b><p>Validate rules, statuses, and responsive layout.</p></div></div></div></section>
+<section id="tech"><div class="wrap"><div class="eyebrow">04 · Technology</div><h2>Tools & technologies</h2><span class="tag">Microsoft Power Apps</span><span class="tag">Canvas Apps</span><span class="tag">Power Fx</span><span class="tag">SharePoint</span><span class="tag">Microsoft Lists</span><span class="tag">Power Automate*</span><p><small>*Power Automate is used for workflows and automation in final implementation.</small></p></div></section>
+<section id="screens"><div class="wrap"><div class="eyebrow">05 · Screenshots</div><h2>Application walkthrough</h2><div class="gallery"><div class="placeholder"><div><strong>Home Dashboard</strong><img src="assets/Homepage_Dashboard.png" alt="Home_Dashboard" width="333"></div></div><div class="placeholder"><div><strong>Booking Form</strong><img src="assets/Booking_Form.png" alt="Booking_Form" width="333"></div></div><div class="placeholder"><div><strong>Room Availability</strong><img src="assets/Room_Availability.png" alt="Room_Availability" width="333"></div></div><div class="placeholder"><div><strong>My Bookings</strong><img src="assets/My_Bookings.png" alt="My_Bookings" width="333"></div></div><div class="placeholder"><div><strong>Booking Details</strong><img src="assets/Booking_Details.png" alt="Booking_Details" width="333"></div></div><div class="placeholder"><div><strong>Admin Dashboard</strong><img src="assets/Admin_Dashboard.png" alt="Admin_Dashboard" width="333"></div></div></div>
+<br><div class="gallery"><div class="placeholder"><div><strong>Home Dashboard 2</strong><img src="assets/Homepage_Dashboard_2.png" alt="Home_Dashboard_2" width="333"></div></div><div class="placeholder"><div><strong>Booking Confirmed</strong><img src="assets/Booking_Confirmed.png" alt="Booking_Confirmed" width="333"></div></div><div class="placeholder"><div><strong>Admin Dashboard 2</strong><img src="assets/Admin_Dashboard_2.png" alt="Admin_Dashboard_2" width="333"></div></div><div class="placeholder"><div><strong>Booking Rules & Guidelines</strong><img src="assets/Booking_Rules_&_Guidelines.png" alt="Booking_Rules_&_Guidelines" width="333"></div></div><div class="placeholder"><div><strong>Booking Confirmation Mail</strong><img src="assets/Booking_Confirmation_Mail.png" alt="Booking_Confirmation_Mail" width="333"></div></div><div class="placeholder"><div><strong>Booking Cancellation Mail</strong><img src="assets/Booking_Cancelled_Mail.png" alt="Booking_Cancelled_Mail" width="333"></div></div></div></div></section>
+<!-- Recognition & Project Completion Section -->
+<section id="recognition">
+    <div class="wrap">
+
+        <div class="eyebrow">06 · Recognition & Project Completion</div>
+
+        <h2>Official Recognition from SVKM’s NMIMS</h2>
+
+        <p>
+            The project received formal recognition from the MPSTME Library,
+            SVKM’s NMIMS. The documents below acknowledge the successful
+            development and completion of the Discussion Room Booking System.
+        </p>
+
+        <div class="recognition-grid">
+
+            <!-- Certificate of Achievement -->
+            <article class="document-card">
+
+                <a href="assets/certificate-of-achievement.png"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/certificate-of-achievement.png"
+                        alt="Certificate of Achievement awarded to Bhavya Dedhia on 28 October 2026">
+                </a>
+
+                <h3>Certificate of Achievement</h3>
+
+                <p>
+                    <strong>Issued:</strong> 28 October 2026
+                    <br>
+                    Recognises the successful development of the
+                    Discussion Room Booking System for the MPSTME Library.
+                </p>
+
+                <a class="document-link"
+                   href="assets/certificate-of-achievement.png"
+                   target="_blank"
+                   rel="noopener">
+                    View Full Certificate ↗
+                </a>
+
+            </article>
+
+
+            <!-- Letter of Appreciation and Project Completion -->
+            <article class="document-card">
+
+                <a href="assets/project-completion-letter.jpeg"
+                   target="_blank"
+                   rel="noopener">
+
+                    <img
+                        src="assets/project-completion-letter.jpeg"
+                        alt="Letter of Appreciation and Project Completion dated 29 October 2026">
+                </a>
+
+                <h3>Letter of Appreciation & Project Completion</h3>
+
+                <p>
+                    <strong>Issued:</strong> 29 October 2026
+                    <br>
+                    Confirms successful development during August–October 2026
+                    and states that the system is live and operational
+                    at the MPSTME Library.
+                </p>
+
+                <a class="document-link"
+                   href="assets/project-completion-letter.jpeg"
+                   target="_blank"
+                   rel="noopener">
+                    View Full Letter ↗
+                </a>
+
+            </article>
+
+        </div>
+
+        <p style="font-size:13px; margin-top:18px;">
+            Both documents are displayed as issued. Open either document
+            to view it at full size.
+        </p>
+
+    </div>
+</section>
+<section id="contact"><div class="wrap"><div class="eyebrow">Let's connect</div><h2>Interested in this project?</h2><p>I'm interested in Power Platform development, business applications, automation, and solving practical problems through technology.</p><a class="btn primary" href="mailto:bhavya.dedhia.official@gmail.com">Email me</a><a class="btn secondary" href="https://www.linkedin.com/in/bhavya-dedhia">LinkedIn</a></div></section>
+</main><footer class="wrap footer" align="center">© <span id="year"></span> Bhavya Dedhia · Discussion Room Booking System</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body></html>
